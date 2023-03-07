@@ -1,6 +1,6 @@
-const cardsGeo = document.getElementById("cards")
-const locationGeo = document.getElementById("location").content
-const fragment = document.createDocumentFragment()
+let cardsGeo = document.getElementById("cards")
+let locationGeo = document.getElementById("location").content
+let fragment = document.createDocumentFragment() 
 
 let topGeo = []
 
@@ -21,25 +21,13 @@ const loadGeo = () => {
         .then(response => response.json())
         .then(response => {
             topGeo = response
-            creaLocation()
+            mostrarGeo()
         })
         .catch(err => console.error(err));
 }
 
-const creaLocation = () => {
+const mostrarGeo = () =>{
 
-    topGeo.forEach((ubica) => {
-        locationGeo.querySelectionAll('p')[0].textConstent = ubica.location
-        locationGeo.querySelectionAll('p')[1].textConstent = ubica.city
-        locationGeo.querySelectionAll('p')[2].textConstent = ubica.country
-        locationGeo.querySelectionAll('p')[3].textConstent = ubica.languaje
-        locationGeo.querySelectionAll('p')[4].textConstent = ubica.continent
-        locationGeo.querySelectionAll('p')[5].textConstent = ubica.currency
-
-        const clone = locationGeo.cloneNode(true)
-        fragment.appendChild(clone)
-    })
-
-
-    cardsGeo.appendChild(fragment)
+    locationGeo.querySelector('p')[0].textContent = topGeo.city.region_name
+    locationGeo.querySelector('p')[1].textContent = topGeo.location
 }
