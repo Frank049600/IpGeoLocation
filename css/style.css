@@ -1,6 +1,8 @@
-body{
-    padding: 0;
-    margin: 0;
+
+
+.information{
+    width: 80%;
+    margin-left: 9%;
 }
 
 .container{
@@ -8,3 +10,58 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+h1{
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+p{
+    color: white;
+}
+
+div{
+    align-items: center;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.location{
+    background: green;
+    align-items: center;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+
+.city{
+    background: green;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%
+}
+
+.country{
+    background: green;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%
+}
+
+.continent{
+    background: green;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%
+}
+
+.currency{
+    background: green;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%
+}
+

@@ -17,17 +17,30 @@ const loadGeo = () => {
         }
     };
     
-    fetch('https://ip-geo-location4.p.rapidapi.com/?ip=8.8.8.8', options)
+    fetch('http://localhost:5050/js/api.json', options)
         .then(response => response.json())
         .then(response => {
             topGeo = response
+            console.log(topGeo)
             mostrarGeo()
         })
         .catch(err => console.error(err));
 }
 
 const mostrarGeo = () =>{
+    
+    locationGeo.querySelectorAll('p')[0].textContent = topGeo.location.latitude
+    locationGeo.querySelectorAll('p')[1].textContent = topGeo.location.longitude
+    locationGeo.querySelectorAll('p')[2].textContent = topGeo.city.name
+    locationGeo.querySelectorAll('p')[3].textContent = topGeo.country.country_name
+    locationGeo.querySelectorAll('p')[4].textContent = topGeo.country.languages[0].native
+    locationGeo.querySelectorAll('p')[5].textContent = topGeo.continent.continent_name
+    locationGeo.querySelectorAll('p')[6].textContent = topGeo.currency.name
+    locationGeo.querySelectorAll('p')[7].textContent = topGeo.currency.code
+    
 
-    locationGeo.querySelector('p')[0].textContent = topGeo.city.region_name
-    locationGeo.querySelector('p')[1].textContent = topGeo.location
+    const clone = locationGeo.cloneNode(true)
+    fragment.appendChild(clone)
+
+    cardsGeo.appendChild(fragment)
 }

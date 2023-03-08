@@ -1,0 +1,40 @@
+{
+    "ip": "187.217.225.35",
+    "type": "ipv4",
+    "location": {
+        "latitude": 19.2986,
+        "longitude": -99.1837
+    },
+    "city": {
+        "region_name": "Mexico City",
+        "name": "Mexico City (Miguel Hidalgo Villa Olímpica)"
+    },
+    "country": {
+        "geoname_id": "3996063",
+        "country_code": "MX",
+        "country_code_ISO3": "MEX",
+        "country_name": "Mexico",
+        "capital": "Mexico City",
+        "area_size_sq_km": "1972550",
+        "population": "126190788",
+        "languages": [
+            {
+                "code": "es",
+                "name": "Spanish",
+                "native": "Español"
+            }
+        ],
+        "calling_code": "52",
+        "tld": ".mx",
+        "is_eu": false
+    },
+    "continent": {
+        "geoname_id": "6255149",
+        "continent_name": "North America",
+        "continent_code": "NA"
+    },
+    "currency": {
+        "code": "MXN",
+        "name": "Peso"
+    }
+}
