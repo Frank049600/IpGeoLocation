@@ -1,67 +1,102 @@
+body{
+    background: #c4c6c7;
+}
 
-
-.information{
-    width: 80%;
-    margin-left: 9%;
+.title{
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    background: #b82929;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 25px;
+    border-radius: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.container .btn{
+    color: white;
+    font-size: 1.5rem;
+    background: #3d3d3d;
+    border-style: none;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 5rem;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.container .btn:hover{
+    box-shadow: 0 8px 8px 0 #00000096,0 8px 8px 0 #00000096;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+    cursor: pointer;
+}
+
+.container .btn:active {
+    transform: scale(1);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.logo img{
+    width: 2rem;
+    height: 3rem;
+}
+
+img .pais{
+    width: 2rem;
+    height: 5rem;
+}
+
+.information{
+    margin-top: 5%;
+    margin-left: 25%;
 }
 
 h1{
-    font-size: 20px;
-    align-items: center;
-    text-align: center;
+    font-weight: 900;
 }
 
 p{
     color: white;
 }
 
-div{
-    align-items: center;
-    text-align: center;
+section{
+    display: flex;
+    width: 40rem;
+    height: 20rem;
+    font-size: 9px;
+}
+
+section #cont{
+    width: 0%;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: all 0.3s;
+    background-color: #227093;
+}
+
+section #cont:hover{
+    cursor: crosshair;
+    width: 30%;
+    opacity: 1;
+    filter: contrast(220%);
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 8px 8px 0 #00000096,0 8px 8px 0 #00000096;
+}
+
+section .location, .city, .country, .continent, .currency{
+    background-color: #16a085;
     border-radius: 2rem;
+    margin: 1px;
 }
-
-.location{
-    background: green;
-    align-items: center;
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 1%;
-}
-
-
-.city{
-    background: green;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 1%
-}
-
-.country{
-    background: green;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 1%
-}
-
-.continent{
-    background: green;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 1%
-}
-
-.currency{
-    background: green;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 1%
-}
-
