@@ -1,8 +1,8 @@
-let cardsGeo = document.getElementById("cards")
-let locationGeo = document.getElementById("location").content
+let cardsGeo = document.getElementById('cards')
+let locationGeo = document.getElementById('location').content
 let fragment = document.createDocumentFragment()
-let showInput = document.querySelector("location")
-let showOutput = document.querySelector("location")
+let showInput = document.querySelector('location')
+let btncerrar = document.querySelector('cerrar')
 
 
 let topGeo = []
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadGeo()
 })
 
-const loadGeo = () => {
+const loadGeo = () => { 
     const options = {
         method: 'GET',
         headers: {
@@ -31,8 +31,8 @@ const loadGeo = () => {
                 showInput.mostrarGeo();
             })
 
-            showOutput.addEventListener('onClick', () => {
-                showOutput.cerrarGeo();
+            btncerrar.addEventListener('onClick', () => {
+                btncerrar.cerrarGeo();
             })
 
         })
@@ -58,5 +58,5 @@ const mostrarGeo = () =>{
 }
 
 const cerrarGeo = () => {
-    topGeo.close(cardsGeo);
+    locationGeo.close();
 }
