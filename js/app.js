@@ -2,6 +2,8 @@ let cardsGeo = document.getElementById('cards')
 let locationGeo = document.getElementById('ubica').content
 let fragment = document.createDocumentFragment()
 
+let output = document.getElementById('map')
+
 
 let topGeo = []
 
@@ -18,7 +20,7 @@ const loadGeo = () => {
         }
     };
     
-    fetch('http://localhost:5050/js/api.json', options)
+    fetch('https://ip-geo-location4.p.rapidapi.com/?ip=8.8.8.8', options)
         .then(response => response.json())
         .then(response => {
             topGeo = response
@@ -55,3 +57,26 @@ const cerrarGeo = () => {
     document.querySelector('div.information').style.display = 'none'
 }
 
+
+function findMe(){
+
+        if (navigator.geolocation){
+            output.innerHTML = "<p> TU NAVEGADOR SOPORTA GEOLOCALIZACION</p>";
+
+        }else {
+            output.innerHTML="<p> EL NAVEGADOR NO SOPORTA GEOLOCALIZACION</p>";
+        }
+
+        function localizacion(topGeo){
+            var latitude = topGeo.location.latitude;
+            var longitude = topGeo.location.longitude;
+
+            output.innerHTML="<p> LATITUD: "+latitude+"<br>LONGITUD: "+longitude+"</p>";
+        }
+            function error(){
+                output.innerHTML = "<p>NO SE PUEDE OBTENER TU UBICACION, DISCULPE LOS MALESTARES</p>";
+            }
+
+            navigator.geolocation.getCurrentPosition(localizacion,error);
+            
+    }
