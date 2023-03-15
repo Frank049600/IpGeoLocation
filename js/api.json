@@ -1,31 +1,44 @@
 {
-    "ip": "187.217.225.35",
+    "ip": "8.8.8.8",
     "type": "ipv4",
     "location": {
-        "latitude": 19.2986,
-        "longitude": -99.1837
+        "latitude": 37.4223,
+        "longitude": -122.085
     },
     "city": {
-        "region_name": "Mexico City",
-        "name": "Mexico City (Miguel Hidalgo Villa Olímpica)"
+        "region_name": "California",
+        "name": "Mountain View"
     },
     "country": {
-        "geoname_id": "3996063",
-        "country_code": "MX",
-        "country_code_ISO3": "MEX",
-        "country_name": "Mexico",
-        "capital": "Mexico City",
-        "area_size_sq_km": "1972550",
-        "population": "126190788",
+        "geoname_id": "6252001",
+        "country_code": "US",
+        "country_code_ISO3": "USA",
+        "country_name": "United States",
+        "capital": "Washington",
+        "area_size_sq_km": "9629091",
+        "population": "327167434",
         "languages": [
+            {
+                "code": "en",
+                "name": "English",
+                "native": "English"
+            },
             {
                 "code": "es",
                 "name": "Spanish",
                 "native": "Español"
+            },
+            {
+                "code": "haw"
+            },
+            {
+                "code": "fr",
+                "name": "French",
+                "native": "Français"
             }
         ],
-        "calling_code": "52",
-        "tld": ".mx",
+        "calling_code": "1",
+        "tld": ".us",
         "is_eu": false
     },
     "continent": {
@@ -34,7 +47,7 @@
         "continent_code": "NA"
     },
     "currency": {
-        "code": "MXN",
-        "name": "Peso"
+        "code": "USD",
+        "name": "Dollar"
     }
 }

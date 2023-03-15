@@ -12,69 +12,87 @@
     <div class="title">Ip Geo Location</div> 
 
     <div class="container" id="cards">
-        <input class="btn" type="button" value="Buscar" onclick="mostrarGeo()"> <!--Boton buscar-->
+        <!--button class="btn" id="abrir">Buscar</button-->
+        <input class="btn" type="button" value="Mostrar" onclick="mostrarGeo()"> <!--Boton buscar-->
+
+        <!--button class="btn" id="cerrar">Cerrar</button--><!--Boton cerrar-->
+        <input type="button" value="Cerrar" class="btn" onclick="cerrarGeo()">
         
         
     </div>
-
-    <template id="location">
-
-        <button class="btn" id="cerrar">Cerrar</button><!--Boton cerrar-->
-        <!--input type="button" value="Cerrar" class="btn" onclick="cerrarGeo()"-->
-
-            <div class="information">
-                <section>
-                    <div class="location" id="cont">
-                        <div class="logo">
-                            <img src="/img/Location.png">
-                        </div>
-        
-                        <h1>Ubicación: </h1>
-                        <p>location</p><!--0-->
-                        <p>location</p><!--1-->
-                    </div>
-        
-                    <div class="city" id="cont">
-                        <div class="logo">
-                            <img src="/img/ciudad.png">
-                        </div>
-        
-                        <h1>Ciudad: </h1>
-                        <p>city</p><!--2-->
-                    </div>
-        
-                    <div class="country" id="cont">
-                        <div class="logo">
-                            <img class="pais" src="/img/país.png">
-                        </div>
-        
-                        <h1>País: </h1>
-                        <p>country</p><!--3-->
-                        <p>country</p><!--4-->
-                    </div>
-        
-                    <div class="continent" id="cont">
-                        <div class="logo">
-                            <img src="/img/continente.png" alt="">
-                        </div>
-        
-                        <h1>Continente: </h1>
-                        <p>continent</p><!--5-->
-                    </div>
-                    <div class="currency" id="cont">
-                        <div class="logo">
-                            <img src="/img/moneda.png">
-                        </div>
-                        
-                        <h1>Divisa: </h1>
-                        <p>currency</p><!--6-->
-                        <p>currency</p><!--7-->
-                    </div>
-                </section>
-            </div>
-    </template>
+        <template id="ubica">
     
+                <div class="information">
+                    <section>
+                        <div class="location" id="cont">
+                            <div class="logo">
+                                <img src="/img/Location.png">
+                            </div>
+            
+                            <h1>Ubicación </h1>
+                            <h2>Latitud</h2>
+                            <p>latitud</p><!--0-->
+                            <h2>Longitud</h2>
+                            <p>longitud</p><!--1-->
+                        </div>
+            
+                        <div class="city" id="cont">
+                            <div class="logo">
+                                <img src="/img/ciudad.png">
+                            </div>
+            
+                            <h1>Ciudad </h1>
+                            <p>city</p><!--2-->
+                            <h2>Región</h2>
+                            <p>region</p><!--3-->
+                        </div>
+            
+                        <div class="country" id="cont">
+                            <div class="logo">
+                                <img class="pais" src="/img/país.png">
+                            </div>
+            
+                            <h1>País </h1>
+                            <p>country</p><!--4-->
+                            <h2>Capital</h2>
+                            <p>capital</p><!--5-->
+                            <h2>Población</h2>
+                            <p>poblacion</p><!--6-->
+                        </div>
+            
+                        <div class="continent" id="cont">
+                            <div class="logo">
+                                <img class="continente" src="/img/continente.png" alt="">
+                            </div>
+            
+                            <h1>Continente </h1>
+                            <p>continent</p><!--7-->
+                        </div>
 
+                        <div class="currency" id="cont">
+                            <div class="logo">
+                                <img class="currency" src="/img/moneda.png" alt="">
+                            </div>
+            
+                            <h1>Moneda </h1>
+                            <p>moneda</p><!--8-->
+                            <h2>Código</h2>
+                            <p>code</p><!--9-->
+                        </div>
+
+                        <div class="languaje" id="cont">
+                            <div class="logo">
+                                <img class="languaje" src="/img/lenguaje.png" alt="">
+                            </div>
+            
+                            <h1>Lenguaje </h1>
+                            <p>name</p><!--10-->
+                            <h2>Nativo</h2>
+                            <p>native</p><!--11-->
+                        </div>
+                    </section>
+                </div>
+        </template>
     <script src="js/app.js"></script>
 </body>
 </html>

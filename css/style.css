@@ -18,6 +18,7 @@ body{
     text-align: center;
     align-items: center;
     margin-top: 2rem;
+    
 }
 
 .container .btn{
@@ -56,13 +57,27 @@ img .pais{
     height: 5rem;
 }
 
+img .continente{
+    width: 6rem;
+    height: 3rem;
+}
+
+
 .information{
     margin-top: 5%;
     margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 h1{
     font-weight: 900;
+}
+
+h2{
+    font-size: 15px;
 }
 
 p{
@@ -72,8 +87,8 @@ p{
 section{
     display: flex;
     width: 40rem;
-    height: 20rem;
-    font-size: 9px;
+    height: 15rem;
+    font-size: 5px;
 }
 
 section #cont{
@@ -86,9 +101,9 @@ section #cont{
 }
 
 section #cont:hover{
-    padding-top: 3rem;
     cursor: crosshair;
     width: 30%;
+    height: 20rem;
     opacity: 1;
     filter: contrast(220%);
     font-size: 20px;
@@ -96,7 +111,7 @@ section #cont:hover{
     box-shadow: 0 8px 8px 0 #00000096,0 8px 8px 0 #00000096;
 }
 
-section .location, .city, .country, .continent, .currency{
+section .location, .city, .country, .continent, .currency, .languaje{
     background-color: #16a085;
     border-radius: 2rem;
     margin: 1px;
