@@ -1,40 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background: #c4c6c7;
+    background: #dcdde1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.title{
-    align-items: center;
-    font-weight: bold;
-    text-align: center;
-    background: #b82929;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 25px;
-    border-radius: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+header{
+    background: url('/img/geolocalización.jpg');
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.container{
-    text-align: center;
-    align-items: center;
-    margin-top: 2rem;
-    
+.section{
+    min-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
 }
 
-.container .btn{
+.section .h1{
+    margin-left: 5%;
+    font-size: 50px;
     color: white;
+}
+
+.conte{
+    text-align: center;
+}
+
+.conte .p{
+    margin-top: 15%;    
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+.conte .btn{
+    color: rgba(255, 255, 255, 0.397);
     font-size: 1.5rem;
-    background: #3d3d3d;
+    background: #5c5c5c;
     border-style: none;
-    border-radius: 2rem;
-    width: 10rem;
-    height: 5rem;
+    padding: 4px 20px;
+    border-radius: 30px;
+    font-size: 30px;
+    margin: 5px;
     transition: .5s, color .10s;
     -webkit-transition: .5s, color .10s;
     -moz-transition: .5s, color .10s;
 }
 
-.container .btn:hover{
+.conte .btn:hover{
+    color: white;
     box-shadow: 0 8px 8px 0 #00000096,0 8px 8px 0 #00000096;
     transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
@@ -42,9 +64,73 @@ body{
     cursor: pointer;
 }
 
-.container .btn:active {
+.conte .btn:active {
     transform: scale(1);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+/*---------------------------------------------------------------------------------*/
+
+
+
+.info h3{
+    font-size: 30px;
+    margin-top: 10%;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.info h4{
+    margin-bottom: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+hr{
+    margin-top: 1em;
+    border-style: none;
+    background: black;
+    height: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.img-icono{
+    margin-left: 25%;
+    width: 20em;
+    height: 20em;
+}
+
+.img-icono2{
+    margin-left: 9%;
+    width: 15em;
+    height: 10em;
+    margin-bottom: 7em;
+
+}
+
+.fondo-img{
+    background: url(/img/geolocalización.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 10em;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.information{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
 }
 
 .logo img{
@@ -62,57 +148,55 @@ img .continente{
     height: 3rem;
 }
 
-
-.information{
-    margin-top: 5%;
-    margin-left: 25%;
-    margin-right: 25%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-h1{
-    font-weight: 900;
+.tema{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-weight: bold;
 }
 
 h2{
-    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 20px;
+    padding-top: 1em;
 }
 
-p{
+.show{
     color: rgba(255, 255, 255, 0.616);
 }
 
-section{
+.info-templade{
+    text-align: center;
     display: flex;
-    width: 40rem;
+    width: 100rem;
     height: 15rem;
     font-size: 5px;
 }
 
-section #cont{
+.info-templade #cont{
     width: 0%;
     flex-grow: 1;
     object-fit: cover;
-    opacity: .8;
+    opacity: 1;
     transition: all 0.3s;
-    background-color: #227093;
+    background-color: #265b86;
 }
 
-section #cont:hover{
+.info-templade #cont:hover{
+    padding-top: 3%;
     cursor: crosshair;
-    width: 30%;
+    width: 20%;
     height: 20rem;
     opacity: 1;
     filter: contrast(220%);
     font-size: 20px;
     transition: all 0.3s;
+    border-radius: 5px;
     box-shadow: 0 8px 8px 0 #00000096,0 8px 8px 0 #00000096;
 }
 
-section .location, .city, .country, .continent, .currency, .languaje{
-    background-color: #16a085;
-    border-radius: 2rem;
+.info-templade .location, .city, .country, .continent, .currency, .languaje{
+    border-radius: 2em;
     margin: 1px;
 }
+

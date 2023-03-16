@@ -43,7 +43,6 @@ const mostrarGeo = () =>{
     locationGeo.querySelectorAll('p')[9].textContent = topGeo.currency.code 
     locationGeo.querySelectorAll('p')[10].textContent = topGeo.country.languages[0].name
     locationGeo.querySelectorAll('p')[11].textContent = topGeo.country.languages[0].native
-    
 
     const clone = locationGeo.cloneNode(true)
     fragment.appendChild(clone)
@@ -52,31 +51,5 @@ const mostrarGeo = () =>{
 }
 
 const cerrarGeo = () => {
-    console.log(locationGeo.querySelector('.close'))
-
     document.querySelector('div.information').style.display = 'none'
 }
-
-
-function findMe(){
-
-        if (navigator.geolocation){
-            output.innerHTML = "<p> TU NAVEGADOR SOPORTA GEOLOCALIZACION</p>";
-
-        }else {
-            output.innerHTML="<p> EL NAVEGADOR NO SOPORTA GEOLOCALIZACION</p>";
-        }
-
-        function localizacion(topGeo){
-            var latitude = topGeo.location.latitude;
-            var longitude = topGeo.location.longitude;
-
-            output.innerHTML="<p> LATITUD: "+latitude+"<br>LONGITUD: "+longitude+"</p>";
-        }
-            function error(){
-                output.innerHTML = "<p>NO SE PUEDE OBTENER TU UBICACION, DISCULPE LOS MALESTARES</p>";
-            }
-
-            navigator.geolocation.getCurrentPosition(localizacion,error);
-            
-    }

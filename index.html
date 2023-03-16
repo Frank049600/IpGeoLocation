@@ -6,34 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IpGeoLocation</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
 
-    <div class="title">Ip Geo Location</div> 
+    <header>
+        <section class="section">
+            <h1 class="h1">Ip Geolocalización</h1>
+          <div class="conte">
+            <p class="p">Ubicación</p>
+            <!--button class="btn" id="abrir">Buscar</button-->
+            <input class="btn" type="button" value="Mostrar" onclick="mostrarGeo()"> <!--Boton buscar-->
+            <!--button class="btn" id="cerrar">Cerrar</button--><!--Boton cerrar-->
+            <input type="button" value="Cerrar" class="btn" onclick="cerrarGeo()">
+          </div>
+        </section>
+    </header>
 
-    <div class="container" id="cards">
-        <!--button class="btn" id="abrir">Buscar</button-->
-        <input class="btn" type="button" value="Mostrar" onclick="mostrarGeo()"> <!--Boton buscar-->
+            <div class="container" id="cards">
+            </div>
 
-        <!--button class="btn" id="cerrar">Cerrar</button--><!--Boton cerrar-->
-        <input type="button" value="Cerrar" class="btn" onclick="cerrarGeo()">
-        
-        
-    </div>
-        <template id="ubica">
-    
+            <template id="ubica">
                 <div class="information">
-                    <section>
+                    <section class="info-templade">
                         <div class="location" id="cont">
                             <div class="logo">
                                 <img src="/img/Location.png">
                             </div>
             
-                            <h1>Ubicación </h1>
+                            <h1 class="tema">Ubicación </h1>
                             <h2>Latitud</h2>
-                            <p>latitud</p><!--0-->
+                            <p class="show">latitud</p><!--0-->
                             <h2>Longitud</h2>
-                            <p>longitud</p><!--1-->
+                            <p class="show">longitud</p><!--1-->
                         </div>
             
                         <div class="city" id="cont">
@@ -41,10 +46,10 @@
                                 <img src="/img/ciudad.png">
                             </div>
             
-                            <h1>Ciudad </h1>
-                            <p>city</p><!--2-->
+                            <h1 class="tema">Ciudad </h1>
+                            <p class="show">city</p><!--2-->
                             <h2>Región</h2>
-                            <p>region</p><!--3-->
+                            <p class="show">region</p><!--3-->
                         </div>
             
                         <div class="country" id="cont">
@@ -52,12 +57,12 @@
                                 <img class="pais" src="/img/país.png">
                             </div>
             
-                            <h1>País </h1>
-                            <p>country</p><!--4-->
+                            <h1 class="tema">País </h1>
+                            <p class="show">country</p><!--4-->
                             <h2>Capital</h2>
-                            <p>capital</p><!--5-->
+                            <p class="show">capital</p><!--5-->
                             <h2>Población</h2>
-                            <p>poblacion</p><!--6-->
+                            <p class="show">poblacion</p><!--6-->
                         </div>
             
                         <div class="continent" id="cont">
@@ -65,8 +70,8 @@
                                 <img class="continente" src="/img/continente.png" alt="">
                             </div>
             
-                            <h1>Continente </h1>
-                            <p>continent</p><!--7-->
+                            <h1 class="tema">Continente </h1>
+                            <p class="show">continent</p><!--7-->
                         </div>
 
                         <div class="currency" id="cont">
@@ -74,10 +79,10 @@
                                 <img class="currency" src="/img/moneda.png" alt="">
                             </div>
             
-                            <h1>Moneda </h1>
-                            <p>moneda</p><!--8-->
+                            <h1 class="tema">Moneda </h1>
+                            <p class="show">moneda</p><!--8-->
                             <h2>Código</h2>
-                            <p>code</p><!--9-->
+                            <p class="show">code</p><!--9-->
                         </div>
 
                         <div class="languaje" id="cont">
@@ -85,16 +90,65 @@
                                 <img class="languaje" src="/img/lenguaje.png" alt="">
                             </div>
             
-                            <h1>Lenguaje </h1>
-                            <p>name</p><!--10-->
+                            <h1 class="tema">Lenguaje </h1>
+                            <p class="show">name</p><!--10-->
                             <h2>Nativo</h2>
-                            <p>native</p><!--11-->
+                            <p class="show">native</p><!--11-->
                         </div>
                     </section>
 
-                    <div id="map"></div>
+                    <!--div id="showMap" style="width: 450px; height: 350px;"> </div-->
                 </div>
         </template>
+
+        <div class="info">
+            <h3>Confiable y rápido.</h3><hr><br> 
+            <h4>API devuelve país, ciudad, latitud, longitud, moneda e idioma.
+                <br><br>
+                La geolocalización basada en direcciones IP es una técnica que se usa para calcular 
+                la ubicación geográfica de un dispositivo conectado a Internet, utilizando su dirección IP.
+                <br>
+                Este mecanismo depende de que la dirección IP del dispositivo figure en una base de datos con 
+                su respectiva ubicación, dirección postal, ciudad, país, región o coordenadas.
+            </h4>
+            <img class="img-icono" src="/img/icono_GEO.png" alt="">
+            <img class="img-icono2" src="/img/icono_GEO_lugar.png" alt="">
+            <div class="fondo-img"></div>
+        </div>
+
+        <!------------------------------------------Inicio del Footer--------------------------------------------->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="/img/Logo.jpg" alt="Logo de IpGeoLocation">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>RapidAPI</h2>
+                <p>
+                    RapidAPI es una plataforma única que le permite conectarse con 
+                    una gran colección de APIs públicas para ayudar a impulsar su proceso 
+                    de desarrollo.
+                </p>
+            </div>
+            <div class="box">
+                <h2>Viculos</h2>
+                <div class="red-social">
+                    <a href="https://rapidapi.com/futureapi-futureapi-default/api/ip-geo-location4/">https://rapidapi.com/</a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>IpGeoLocation - </b>
+                <b>Ultima actualición: </b> 15/03/2023
+            </small>
+        </div>
+    </footer>  
+    <!---------------------------------------Fin del footer-------------------------------------------->
+
     <script src="js/app.js"></script>
 </body>
 </html>
